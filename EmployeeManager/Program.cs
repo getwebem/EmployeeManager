@@ -4,9 +4,11 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var DbConnect = "Server=(localdb)\\mssqllocaldb;Database=Northwind;integrated security=true";
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDb")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(DbConnect));
 
 var app = builder.Build();
 
