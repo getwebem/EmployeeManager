@@ -1,8 +1,12 @@
 ﻿using EmployeeManager.Models;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Owin;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-[assembly: OwinStartup(typeof(EmployeeManager.Startup))]
+//[assembly: OwinStartup(typeof(EmployeeManager.Startup))]
 namespace EmployeeManager
 {
     public class Startup
