@@ -35,5 +35,17 @@ namespace EmployeeManager.Controllers
            }).Distinct().ToList();
             ViewBag.Countries = listOfCountries;    
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Insert(Employee model)
+        {   FillCountries();
+            if (ModelState.IsValid)
+            {
+                db.Employees.Add(model);
+                db.SaveChanges();
+                ViewBag.Message = "Employee added successfully";
+            }
+            return View(model);
+        }
     }
 }
