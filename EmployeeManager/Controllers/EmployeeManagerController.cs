@@ -13,6 +13,7 @@ namespace EmployeeManager.Controllers
         {
             this.db = db;
         }
+        
         public IActionResult List()
         {
             List<Employee> model = (from e in db.Employees
@@ -20,11 +21,12 @@ namespace EmployeeManager.Controllers
                                     select e).ToList();
             return View(model);
         }
+
         [HttpGet]
         public IActionResult Insert()
         {
-            return View();
             FillCountries();
+            return View();
         }
 
         private void FillCountries()
@@ -35,6 +37,14 @@ namespace EmployeeManager.Controllers
            }).Distinct().ToList();
             ViewBag.Countries = listOfCountries;    
         }
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            FillCountries();
+            var model = db.Employees.Find(id);
+            return View(model);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Insert(Employee model)
