@@ -53,9 +53,42 @@ namespace EmployeeManager.Controllers
             {
                 db.Employees.Add(model);
                 db.SaveChanges();
-                ViewBag.Message = "Employee added successfully";
+                ViewBag.Message = "Employee Added successfully";
             }
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Employee model)
+        {
+            FillCountries();
+            if (ModelState.IsValid)
+            {
+                db.Employees.Update(model);
+                db.SaveChanges();
+                ViewBag.Message = "Employee Updated successfully";
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        [ActionName("Delete")]
+        public IActionResult ConfirmDelete(int id)
+        {
+            var model = db.Employees.Find(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+           var model = db.Employees.Find(id);
+           db.Employees.Remove(model);
+           db.SaveChanges();
+           TempData["Message"] = "Employee Deleted successfully";
+            return RedirectToAction("List");
         }
     }
 }
