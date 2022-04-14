@@ -1,9 +1,18 @@
 ﻿@model Employee
 
-<h2>Insert New Employee</h2>
+<h2>Update New Employee</h2>
 <h3 class="message">@ViewBag.Message</h3>
-<form asp-controller="EmployeeManager" asp-action="Insert" method="post">
+<form asp-controller="EmployeeManager" asp-action="Update" method="post">
     <table border="0">
+          <tr>
+            <td class="right">
+                <label asp-for="EmployeeID"></label>
+            </td>
+            <td>
+                <input type="hidden" asp-for="EmployeeID" />
+                <span asp-validation-for="EmployeeID"></span>
+            </td>
+        </tr>
         <tr>
             <td class="right">
                 <label asp-for="FirstName"></label>
