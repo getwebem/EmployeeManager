@@ -3,6 +3,7 @@ using EmployeeManager.Security;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 var DbConnect = "Server=(localdb)\\mssqllocaldb;Database=Northwind;integrated security=true";
