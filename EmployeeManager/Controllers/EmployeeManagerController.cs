@@ -37,6 +37,7 @@ namespace EmployeeManager.Controllers
            }).Distinct().ToList();
             ViewBag.Countries = listOfCountries;    
         }
+
         [HttpGet]
         public IActionResult Update(int id)
         {
