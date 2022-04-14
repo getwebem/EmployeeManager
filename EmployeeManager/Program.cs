@@ -11,6 +11,12 @@ var DbConnect = "Server=(localdb)\\mssqllocaldb;Database=Northwind;integrated se
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(DbConnect));
 builder.Services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(DbConnect));
+builder.Services.AddIdentity<AppIdentityUser, AppIdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Security/SignIn";
+    options.AccessDeniedPath = "/Security/AccessDenied";
+});
 
 var app = builder.Build();
 
@@ -22,7 +28,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
