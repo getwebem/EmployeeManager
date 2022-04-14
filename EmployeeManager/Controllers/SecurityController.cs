@@ -10,9 +10,11 @@ namespace EmployeeManager.Controllers
         private readonly SignInManager<AppIdentityUser> signInManager;
         private readonly RoleManager<AppIdentityRole> roleManager;
 
-        public SecurityController(UserManager<AppIdentityUser> userManager,
+        public SecurityController(
+            UserManager<AppIdentityUser> userManager,
             SignInManager<AppIdentityUser> signInManager,
-            RoleManager<AppIdentityRole> roleManager)
+            RoleManager<AppIdentityRole> roleManager
+            )
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
