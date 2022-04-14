@@ -1,4 +1,5 @@
 using EmployeeManager.Models;
+using EmployeeManager.Security;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
@@ -9,6 +10,7 @@ var DbConnect = "Server=(localdb)\\mssqllocaldb;Database=Northwind;integrated se
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(DbConnect));
+builder.Services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(DbConnect));
 
 var app = builder.Build();
 
