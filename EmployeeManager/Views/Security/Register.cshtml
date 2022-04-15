@@ -1,0 +1,66 @@
+﻿@model Register
+
+<h2>Create New User Account</h2>
+
+<form asp-controller="Security" asp-action="Register" method="post">
+    <table>
+        <tr>
+            <td class="right">
+                <label asp-for="UserName"></label>
+            </td>
+             <td class="left">
+                <input type="text" asp-action="UserName"
+            </td>
+
+
+             <td class="right">
+                <label asp-for="Password"></label>
+            </td>
+             <td class="left">
+                <input type="password" asp-action="Password"
+            </td>
+
+            
+             <td class="right">
+                <label asp-for="ConfirmPassword"></label>
+            </td>
+             <td class="left">
+                <input type="password" asp-action="ConfirmPassword"
+            </td>
+
+            
+              <td class="right">
+                <label asp-for="Email"></label>
+            </td>
+             <td class="left">
+                <input type="email" asp-action="Email"
+            </td>
+
+            
+              <td class="right">
+                <label asp-for="FullName"></label>
+            </td>
+             <td class="left">
+                <input type="text" asp-action="FullName"
+            </td>
+
+            
+              <td class="right">
+                <label asp-for="BirthDate"></label>
+            </td>
+             <td class="left">
+                <input type="date" asp-action="BirthDate"
+            </td>
+        </tr>
+        <tr colspan="2">
+            <td>
+                <button type="submit">Create</button>
+            </td>
+        </tr>
+    </table>
+    <div asp-validation-summary="All" class="message"></div>
+
+    <h3>
+        <a asp-controller="Security" asp-action="SignIn">Go to Sign In Page</a>
+    </h3>
+</form>
