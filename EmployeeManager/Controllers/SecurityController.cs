@@ -68,6 +68,7 @@ namespace EmployeeManager.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult SignIn(SignIn signIn)
         {
             if (ModelState.IsValid)
@@ -76,13 +77,15 @@ namespace EmployeeManager.Controllers
                     signIn.UserName,
                     signIn.Password,
                     signIn.RememberMe,
-                    false).Result();
+                    false).Result;
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("List", "EmployeeManager");
+                  RedirectToAction("List", "EmployeeManager");
                     else
+                    {
                         ModelState.AddModelError("", "Invalid User Details");
+                    }
                 }
                 return View(signIn);
             }
