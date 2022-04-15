@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//add ef 6 migration 
+//https://www.youtube.com/watch?v=BfEjDD8mWYg
+
 namespace EmployeeManager.Models
 {
     public class SignIn
