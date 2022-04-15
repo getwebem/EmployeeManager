@@ -80,14 +80,9 @@ namespace EmployeeManager.Controllers
                     false).Result;
 
                 if (result.Succeeded)
-                {
-                  RedirectToAction("List", "EmployeeManager");
+                        return RedirectToAction("List", "EmployeeManager");
                     else
-                    {
-                        ModelState.AddModelError("", "Invalid User Details");
-                    }
-                }
-               
+                      ModelState.AddModelError("", "Invalid User Details");
             }
             return View(signIn);
         }
