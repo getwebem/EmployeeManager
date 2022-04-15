@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-//add ef 6 migration 
+//Added  Entity Framework 6.0.4 migration 
+// (1) Add-Migration -Context AppDbContext
+// (2) update-database -Context AppIdentityDbContext
 //https://www.youtube.com/watch?v=BfEjDD8mWYg
 
 namespace EmployeeManager.Models
