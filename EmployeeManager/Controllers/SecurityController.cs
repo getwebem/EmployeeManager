@@ -1,5 +1,6 @@
 ﻿using EmployeeManager.Models;
 using EmployeeManager.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -85,6 +86,19 @@ namespace EmployeeManager.Controllers
                       ModelState.AddModelError("", "Invalid User Details");
             }
             return View(signIn);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult SignOut()
+        {
+            signInManager.SignOutAsync().Wait();
+            return RedirectToAction("SignIn", "Security");
+        }
+
+        public IActionResult AccessDenied() { 
+            return View(); 
         }
 
     }
