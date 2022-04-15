@@ -60,5 +60,33 @@ namespace EmployeeManager.Controllers
             }
             return View(register);
         }
+
+        [HttpGet]
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SignIn(SignIn signIn)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = signInManager.PasswordSignInAsync(
+                    signIn.UserName,
+                    signIn.Password,
+                    signIn.RememberMe,
+                    false).Result();
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("List", "EmployeeManager");
+                    else
+                        ModelState.AddModelError("", "Invalid User Details");
+                }
+                return View(signIn);
+            }
+        }
+
     }
 }
