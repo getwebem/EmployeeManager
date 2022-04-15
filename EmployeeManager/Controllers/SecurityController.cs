@@ -87,8 +87,9 @@ namespace EmployeeManager.Controllers
                         ModelState.AddModelError("", "Invalid User Details");
                     }
                 }
-                return View(signIn);
+               
             }
+            return View(signIn);
         }
 
     }
