@@ -9,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 var DbConnect = "Server=(localdb)\\mssqllocaldb;Database=Northwind;integrated security=true";
 
 // Add services to the container.
+builder.Services.AddRazorPages().AddRazorPagesOptions(options =>
+{
+    options.Conventions.AddPageRoute("/EmployeeManager/List", "");
+});
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(DbConnect));
 builder.Services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(DbConnect));
 builder.Services.AddIdentity<AppIdentityUser, AppIdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
@@ -31,8 +35,9 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=EmployeeManager}/{action=List}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+});
 
 app.Run();
