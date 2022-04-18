@@ -12,6 +12,7 @@ namespace EmployeeManager.RazorPages.Pages.EmployeeManager
 
         [BindProperty]
         public Employee Employee { get; set; }
+
         public List<SelectListItem> Countries { get; set; }
         public string Message { get; set; }
         public bool DataFound { get; set; } = true;
@@ -40,7 +41,7 @@ namespace EmployeeManager.RazorPages.Pages.EmployeeManager
             if (Employee == null)
             {
                 DataFound = false;
-                Message = "Employee ID not founbd";
+                Message = "Employee ID not found";
             }
             else
             {
