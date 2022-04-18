@@ -2,6 +2,7 @@ using EmployeeManager.RazorPages.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManager.RazorPages.Pages.EmployeeManager
 {
@@ -40,6 +41,34 @@ namespace EmployeeManager.RazorPages.Pages.EmployeeManager
 
         public void OnGet()
         {
+            FillCountries();
+        }
+
+        public void OnPost()
+        {
+            FillCountries();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    db.Employees.Add(Employee);
+                    db.SaveChanges();
+                    Message = "Employee Inserted Successfully";
+                }
+                catch (DbUpdateException ex1)
+                {
+
+                    Message = ex1.Message;
+                    if(ex1.InnerException != null)
+                    {
+                        Message += ": " + ex1.InnerException.Message;
+                    }
+                }
+                catch (Exception ex2)
+                {
+                    Message = ex2.Message;
+                }
+            }
         }
     }
 }
