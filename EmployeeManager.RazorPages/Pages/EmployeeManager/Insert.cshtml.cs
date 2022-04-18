@@ -29,9 +29,6 @@ namespace EmployeeManager.RazorPages.Pages.EmployeeManager
         }
 
 
-
-
-
         public InsertModel(AppDbContext db)
         {
             this.db = db;
