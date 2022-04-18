@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace EmployeeManager.Security
+namespace EmployeeManager.RazorPages.Security
 {
     public class AppIdentityDbContext : IdentityDbContext<AppIdentityUser, AppIdentityRole,string>
     {

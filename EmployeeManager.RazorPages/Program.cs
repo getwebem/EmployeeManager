@@ -1,5 +1,5 @@
-using EmployeeManager.Models;
-using EmployeeManager.Security;
+using EmployeeManager.RazorPages.Models;
+using EmployeeManager.RazorPages.Security;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 

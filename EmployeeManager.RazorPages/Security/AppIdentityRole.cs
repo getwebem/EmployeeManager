@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace EmployeeManager.Security
+namespace EmployeeManager.RazorPages.Security
 {
     public class AppIdentityRole : IdentityRole
     {
