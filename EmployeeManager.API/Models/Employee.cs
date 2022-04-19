@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EmployeeManager.Models
+namespace EmployeeManager.API.Models
 {
     [Table("Employees")]
     public class Employee
