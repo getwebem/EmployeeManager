@@ -22,6 +22,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Security/AccessDenied";
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,9 +30,12 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
-app.UseStaticFiles();
+app.UseStatusCodePagesWithReExecute("/Error", "?code={0}");
+app.UseExceptionHandler("/Error");
 
+app.UseStaticFiles();
 app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
 

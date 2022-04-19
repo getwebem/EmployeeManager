@@ -1,10 +1,10 @@
-﻿page "{id:int}"
+﻿@page "{id:int}"
 @model UpdateModel
 
 <h2>Update Existing Employee</h2>
 <h3 class="message">@Model.Message</h3>
 
-@if (Model.DataFound)
+@if(Model.DataFound)
 {
     
 <form method="post">

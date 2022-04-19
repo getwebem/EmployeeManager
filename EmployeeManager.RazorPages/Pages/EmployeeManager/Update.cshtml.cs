@@ -36,7 +36,7 @@ namespace EmployeeManager.RazorPages.Pages.EmployeeManager
         public void OnGet(int id)
         {
             FillCountries();
-            Employee = db.Employees.Find(id);
+            Employee =  db.Employees.Find(id);
 
             if (Employee == null)
             {
