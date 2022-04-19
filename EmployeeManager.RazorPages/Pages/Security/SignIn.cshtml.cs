@@ -23,7 +23,7 @@ namespace EmployeeManager.RazorPages.Pages.Security
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 var result = await signInManager.PasswordSignInAsync(
                   SignInData.UserName, SignInData.Password, SignInData.RememberMe, false);
