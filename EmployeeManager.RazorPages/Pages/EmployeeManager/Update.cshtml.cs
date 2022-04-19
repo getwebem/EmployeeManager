@@ -1,4 +1,5 @@
 using EmployeeManager.RazorPages.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManager.RazorPages.Pages.EmployeeManager
 {
+    [Authorize(Roles = "Manager")]
     public class UpdateModel : PageModel
     {
         private readonly AppDbContext db = null;

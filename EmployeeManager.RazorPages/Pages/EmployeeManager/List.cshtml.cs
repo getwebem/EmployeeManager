@@ -1,9 +1,11 @@
 using EmployeeManager.RazorPages.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace EmployeeManager.RazorPages.Pages.EmployeeManager
 {
+    [Authorize(Roles = "Manager")]
     public class ListModel : PageModel
     {
         private readonly AppDbContext db = null;
