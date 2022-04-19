@@ -19,9 +19,5 @@ namespace EmployeeManager.RazorPages.Pages.Security
             await signinManager.SignOutAsync();
             return RedirectToPage("/Security/SignIn");
         }
-
-        public void OnGet()
-        {
-        }
     }
 }
