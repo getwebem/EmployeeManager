@@ -1,4 +1,4 @@
-﻿using EmployeeManager.Security;
+﻿using EmployeeManager.APIClient.Security;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
