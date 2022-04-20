@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.MVC", "Empl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.RazorPages", "EmployeeManager.RazorPages\EmployeeManager.RazorPages.csproj", "{7CCAFDB2-7870-4ADA-B9D3-84FE09EDA818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.API", "EmployeeManager.API\EmployeeManager.API.csproj", "{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.API", "EmployeeManager.API\EmployeeManager.API.csproj", "{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EmployeeManager.APIClient", "EmployeeManager.APIClient\EmployeeManager.APIClient.fsproj", "{1E7597FB-3196-41E9-909F-BD962CBD63E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E7597FB-3196-41E9-909F-BD962CBD63E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7597FB-3196-41E9-909F-BD962CBD63E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7597FB-3196-41E9-909F-BD962CBD63E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7597FB-3196-41E9-909F-BD962CBD63E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
