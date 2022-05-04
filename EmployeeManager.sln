@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.RazorPages"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.API", "EmployeeManager.API\EmployeeManager.API.csproj", "{0386AF64-A530-4EC2-853B-3E9FF5F9BAC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.APIClient", "EmployeeManager.APIClient\EmployeeManager.APIClient.csproj", "{12E9E829-44B5-4E6D-8EA0-CF6F41D41A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.APIClient", "EmployeeManager.APIClient\EmployeeManager.APIClient.csproj", "{12E9E829-44B5-4E6D-8EA0-CF6F41D41A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.Blazor", "EmployeeManager.Blazor\EmployeeManager.Blazor.csproj", "{494D75B9-48C9-4C38-8EA4-3C3AF16633A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{12E9E829-44B5-4E6D-8EA0-CF6F41D41A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E9E829-44B5-4E6D-8EA0-CF6F41D41A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12E9E829-44B5-4E6D-8EA0-CF6F41D41A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494D75B9-48C9-4C38-8EA4-3C3AF16633A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494D75B9-48C9-4C38-8EA4-3C3AF16633A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494D75B9-48C9-4C38-8EA4-3C3AF16633A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494D75B9-48C9-4C38-8EA4-3C3AF16633A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
