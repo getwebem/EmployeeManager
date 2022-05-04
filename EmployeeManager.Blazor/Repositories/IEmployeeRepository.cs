@@ -1,6 +1,9 @@
-﻿namespace EmployeeManager.Blazor.Repositories
+﻿using EmployeeManager.Blazor.Models;
+
+
+namespace EmployeeManager.Blazor.Repositories
 {
-    public class IEmployeeRepository
+    public interface IEmployeeRepository
     {
         List<Employee> SelectAll();
         Employee SelectByID(int id);

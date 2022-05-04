@@ -5,7 +5,7 @@
 // (2) update-database -Context AppIdentityDbContext
 //https://www.youtube.com/watch?v=BfEjDD8mWYg
 
-namespace EmployeeManager.Models
+namespace EmployeeManager.Blazor.Models
 {
     public class SignIn
     {

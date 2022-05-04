@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace EmployeeManager.Models
+namespace EmployeeManager.Blazor.Models
 {
     public class Register
     {
